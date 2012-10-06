@@ -123,7 +123,7 @@ $result = mysql_query($query);
 if (!$result) {
 	echo mysql_error() . "\n";
 }
-*/
+
 
 $query = "ALTER TABLE groups ADD paypal_email varchar(150), ADD date date;";
 
@@ -131,6 +131,7 @@ $result = mysql_query($query);
 if (!$result) {
 	echo mysql_error() . "\n";
 }
+*/
 
 
 ?>
