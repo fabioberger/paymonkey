@@ -1,12 +1,5 @@
 <?php
-$LOCAL = false;
-
-if ($LOCAL) {
-	$url = parse_url("mysql://b9c25d6971cf1d:7e5b4676@us-cdbr-east-02.cleardb.com/heroku_cd07237f8c9079f?reconnect=true");
-} else {
-	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-}
-
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $server = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
@@ -59,5 +52,9 @@ if ($db) {
 	}
 }
 
-mysql_select_db($db);
+$CREATETABLES = false;
+
+if ($CREATETABLES) {
+
+}
 ?>
