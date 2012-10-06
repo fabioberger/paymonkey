@@ -56,6 +56,7 @@ $CREATETABLES = false;
 
 if ($CREATETABLES) {
 
+/*
 	$query = 'CREATE TABLE `users` (
 	  `userid` int(14) NOT NULL AUTO_INCREMENT,
 	  `name` varchar(100) NOT NULL,
@@ -82,6 +83,8 @@ if ($CREATETABLES) {
 	if (!$result) {
 		echo mysql_error() . "\n";
 	}
+
+	*/
 
 	$query = 'CREATE TABLE `groups` (
 	  `groupid` int(14) NOT NULL AUTO_INCREMENT,
