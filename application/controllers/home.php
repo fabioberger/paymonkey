@@ -22,4 +22,13 @@ class Home extends MY_Controller {
 		$this->data['friends'] = $friends;
 		$this->_render('pages/pick_friends');
 	}
+
+	public function add_friends() {
+
+		$friends = $this->input->post('allfriends');
+
+		$this->data['friends'] = $friends;
+		$this->title = "Dashboard";
+		$this->_render('pages/dashboard');
+	}
 }
