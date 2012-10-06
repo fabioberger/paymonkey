@@ -52,10 +52,10 @@ if ($db) {
 	}
 }
 
-$CREATETABLES = false;
+$CREATETABLES = true;
 
 if ($CREATETABLES) {
-
+echo "create";
 $query = 'CREATE TABLE `users` (
   `userid` int(14) NOT NULL AUTO_INCREMENT,"
   `name` varchar(100) NOT NULL,
