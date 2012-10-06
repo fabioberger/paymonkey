@@ -13,7 +13,7 @@ class Home extends MY_Controller {
 		$this->_render('pages/home');
 	}
 
-	public function pick_friends() {
+	public function pick_friends(){
 		$this->load->library('facebook');
 		$facebook = New Facebook();
 		$friends = $facebook->getFriends();
@@ -23,12 +23,17 @@ class Home extends MY_Controller {
 		$this->_render('pages/pick_friends');
 	}
 
-	public function add_friends() {
-
+	public function add_friends(){
 		$friends = $this->input->post('allfriends');
-
 		$this->data['friends'] = $friends;
 		$this->title = "Dashboard";
 		$this->_render('pages/dashboard');
+	}
+	
+	public function monkey_form(){
+		$this->title = "MonkeyForm";
+		$this->css[] = "monkey_form.css";
+		$this->javascript[] = "monkey_form.js";
+		$this->_render('pages/monkey_form');
 	}
 }
