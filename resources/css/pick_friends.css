@@ -1,0 +1,46 @@
+.friend-box {
+	background-color: #e7ebf5;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+	width: 190px;
+	height: 55px;
+	float:left;
+	margin: 5px;
+	list-style: none;
+}
+
+.friend-name {
+	float: right;
+	width: 75px;
+	margin-top:5px;
+}
+
+a {
+	color:black;
+	font-size:12px !important;
+	font-weight:normal !important;
+}
+
+img.avatar {
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.checker {
+	float: right;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+ul.cThumbList {
+	height: 615px;
+	overflow-x:hidden; 
+	overflow-y:auto;
+	border:1px #888;
+	width: 900px;
+}
+
+.buttoner {
+	padding-top:400px;
+}

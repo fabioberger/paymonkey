@@ -1,0 +1,28 @@
+#homepage_content {
+text-align:center;
+}
+
+#image_paymonkey {
+height:272px;
+padding-bottom:50px;
+padding-top:35px;
+}
+
+#homepage_header {
+font-size:160px;
+padding-bottom:100px;
+}
+
+#homepage_subtitle {
+font-size:70px;
+padding-bottom:50px;
+}
+
+#b_fbconnect {
+height:100px;
+width:830px;
+}
+
+#fbconnect_text {
+font-size:40px;
+}
