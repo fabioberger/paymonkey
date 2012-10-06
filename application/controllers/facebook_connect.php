@@ -162,8 +162,7 @@ class Facebook_connect extends CI_Controller {
 		
 		$loginUrl = $facebook->loginUrl();
 		
-		echo $loginUrl;
-		//redirect($loginUrl);
+		redirect($loginUrl);
 		//echo $loginUrl;
 		
 	}
