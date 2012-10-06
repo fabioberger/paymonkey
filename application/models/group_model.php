@@ -67,7 +67,7 @@ class Group_model extends CI_Model {
 	 function add_group_details($group_id, $date, $amount, $paypal_email) {
 
 	 	$data = array(
-	 		'total_amount' => $amount,
+	 		'total_amt' => $amount,
 	 		'paypal_email' => $paypal_email,
 	 		'date' => $date
 	 		);
