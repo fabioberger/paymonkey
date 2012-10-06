@@ -56,7 +56,7 @@ $CREATETABLES = false;
 
 if ($CREATETABLES) {
 
-$query = 'CREATE TABLE `users` (".
+$query = 'CREATE TABLE `users` (
   `userid` int(14) NOT NULL AUTO_INCREMENT,"
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
