@@ -27,7 +27,9 @@ class Home extends MY_Controller {
 		$allfriends = $this->input->post('allfriends');
 		$temp_friends = explode(",", $allfriends);
 		for ($i=0; $i < count($temp_friends); $i=$i+2) { 
-			$friends[$temp_friends[$i]] = $temp_friends[($i+1)];
+			if($temp_friends[$i] != '') {
+				$friends[$temp_friends[$i]] = $temp_friends[($i+1)];
+			}
 		}
 
 		$this->data['friends'] = $friends;
