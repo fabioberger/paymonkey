@@ -14,11 +14,12 @@ class Home extends MY_Controller {
 	}
 
 	public function pick_friends(){
+		$this->title = "Pick Friends";
+		$this->css[] = "pick_friends.css";
+		$this->javascript[] = "pick_friends.js";
 		$this->load->library('facebook');
 		$facebook = New Facebook();
 		$friends = $facebook->getFriends();
-		$this->css[] = "pick_friends.css";
-		$this->javascript[] = "pick_friends.js";
 		$this->data['friends'] = $friends;
 		$this->_render('pages/pick_friends');
 	}

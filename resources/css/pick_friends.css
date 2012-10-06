@@ -17,8 +17,9 @@ background-color:#888;
 
 .friend-name {
 float:left;
+margin-left:5px;
 margin-top:5px;
-width:100px;
+width:130px;
 }
 
 img.avatar {
