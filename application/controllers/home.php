@@ -13,7 +13,7 @@ class Home extends MY_Controller {
 		$this->_render('pages/home');
 	}
 
-	public function pick_friends() {
+	public function pick_friends(){
 		$this->load->library('facebook');
 		$facebook = New Facebook();
 		$friends = $facebook->getFriends();
@@ -23,12 +23,61 @@ class Home extends MY_Controller {
 		$this->_render('pages/pick_friends');
 	}
 
-	public function add_friends() {
+	public function add_friends(){
+		$this->load->model('friend_model');
+		$this->load->model('group_model');
 
-		$friends = $this->input->post('allfriends');
+		$userid = $this->session->userdata['userid'];
+		$group_id = $this->group_model->create_group($userid);
 
-		$this->data['friends'] = $friends;
-		$this->title = "Dashboard";
+		$allfriends = $this->input->post('allfriends');
+		$temp_friends = explode(",", $allfriends);
+		$friends = array();
+		for ($i=0; $i < count($temp_friends); $i=$i+2) { 
+			if($temp_friends[$i] != '') {
+				$fbid = $temp_friends[$i];
+				$name = $temp_friends[($i+1)];
+				$friends[$fbid] = $name;
+				$friend_userid = $this->friend_model->add_friend($name, $fbid);
+				$this->group_model->add_group_payer($group_id, $friend_userid);
+			}
+		}
+
+		$num_users = count($friends);
+		$this->group_model->add_num_payees($group_id, $num_users);
+
+		$this->monkey_form($group_id);
+	}
+	
+	public function monkey_form($group_id){
+		$this->title = "MonkeyForm";
+		$this->css[] = "datepicker.css";
+		$this->css[] = "monkey_form.css";
+		$this->javascript[] = "bootstrap-datepicker.js";
+		$this->javascript[] = "monkey_form.js";
+		$this->data['group_id'] = $group_id;
+		$this->_render('pages/monkey_form');
+	}
+
+	//receives monkey form inputs and stores it
+	public function group_details() {
+
+		$date = $this->input->post('date');
+		$amount = $this->input->post('amount');
+		$paypal_email = $this->input->post('paypal_email');
+		$group_id = $this->input->post('group_id');
+
+		$this->load->model('group_model');
+
+		$this->group_model->add_group_details($group_id, $date, $amount, $paypal_email);
+
+		$this->dashboard();
+
+	}
+
+	public function dashboard() {
+		$this->title = "Monkey Dashboard";
+		$this->css[] = "dashboard.css";
 		$this->_render('pages/dashboard');
 	}
 }

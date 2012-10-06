@@ -1,0 +1,22 @@
+.member {
+float:left;
+height:100px;
+padding:5px;
+width:200px;
+}
+
+.friend_img {
+height:85px;
+width:180px;
+}
+
+.friend_img img {
+height:70px;
+width:70px;
+}
+
+.friend_name {
+font-weight:bold;
+height:15px;
+width:200px;
+}

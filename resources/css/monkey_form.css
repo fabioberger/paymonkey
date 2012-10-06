@@ -1,0 +1,20 @@
+#monkeyform {
+margin:0 auto;
+width:400px;
+}
+
+#monkeyform label {
+font-weight:bold;
+}
+
+#prependedInput {
+width:183px;
+}
+
+#duedate {
+width:178px;
+}
+
+.datepicker {
+z-index:1200;
+}
