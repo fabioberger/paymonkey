@@ -1,7 +1,6 @@
 <div class="container">
 <section id="typography">
-
-<div class="modal hide fade">
+<div id="monkeyform_modal" class="modal hide fade">
 <div class="modal-header">
 <h3>Monkey Form</h3>
 </div>
@@ -42,5 +41,3 @@
 </div>
 </section>
 </div>
-
-
