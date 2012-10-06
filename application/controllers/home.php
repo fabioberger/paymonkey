@@ -27,8 +27,10 @@ class Home extends MY_Controller {
 		$allfriends = $this->input->post('allfriends');
 		$temp_friends = explode(",", $allfriends);
 		foreach($temp_friends as $friend) {
-			$pieces = explode("|", $friend);
-			$friends[$pieces[0]] = $pieces[1];
+			if($friend != "") {
+ 				$pieces = explode("|", $friend);
+				$friends[$pieces[0]] = $pieces[1];
+			}
 		}
 
 		$this->data['friends'] = $friends;
