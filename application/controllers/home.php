@@ -20,6 +20,13 @@ class Home extends MY_Controller {
 		$this->_render('pages/home');
 	}
 
+	public function pick_friends() {
+
+		$this->_render('pages/pick_friends');
+
+
+	}
+
 
 	
 }
