@@ -23,8 +23,6 @@
 
 	
 
-	<?php print_r($friends); ?>
-
 
 
 </div>
