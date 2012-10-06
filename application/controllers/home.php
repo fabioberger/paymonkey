@@ -3,6 +3,7 @@
 class Home extends MY_Controller {
 	public function index(){
 		$this->title = "PayMonkey";
+		$this->description = "This app's main use is to assist in splitting bill payment with family and friends. You add your Facebook friends who owe you money from an event and it sends them a message with a link to enter their credit card information and pay their share of the cost. Built By: Soroush Pour, Fabio Berger, and Andrew Gerst";
 		$this->css[] = "home.css";
 		$this->_render('pages/homepage');
 	}
