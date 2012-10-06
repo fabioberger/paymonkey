@@ -43,7 +43,7 @@ class Group_model extends CI_Model {
 		 		'paid' => 0
 		 		);
 
-		 	$insert = $this->db->insert('group_payers', $data);
+		 	$insert = $this->db->insert('payments', $data);
 
 		 	if(!$insert) { return false; }
 
