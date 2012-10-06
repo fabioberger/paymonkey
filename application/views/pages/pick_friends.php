@@ -9,11 +9,13 @@
 
 	<ul>
 	<?php 
-	foreach($friends as $friend) {
-		?><li></li><?php
+	foreach($friends['data'] as $friend) {
+		?><li><?=$friend['name']; ?></li><?php
 	}
 	?>
 	</ul>
+
+	<?php print_r($friends); ?>
 
 
 
