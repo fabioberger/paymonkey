@@ -7,7 +7,7 @@
 <div class="span4">
 	Put friend selector here!
 
-	<ul>
+	<ul class='cThumbList'>
 	<?php 
 	foreach($friends['data'] as $friend) {
 		?>
