@@ -87,10 +87,13 @@ class Group_model extends CI_Model {
 		foreach ($query->result_array() as $row) {
 			$users[$row['userid']] = $row['userid'];
 		}
+		if (!$users) {
+			return array();
+		}
 		$this->db->select('*');
 		$this->db->where_in('userid', $users);
 		$query = $this->db->get('users');
-		foreach ($this->db->result_array() as $full_user_data) {
+		foreach ($query->result_array() as $full_user_data) {
 			$users[$full_user_data['userid']] = $full_user_data;
 		}
 		var_dump($users);
