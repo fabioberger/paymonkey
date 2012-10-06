@@ -82,7 +82,8 @@ class Group_model extends CI_Model {
 		$this->db->select('userid');
 		$this->db->where('groupid', $group_id);
 		$query = $this->db->get('payments');
-		print_r($query);
+		$result = $query->row_data();
+		print_r($result);
 		return array();
 	}
 }
