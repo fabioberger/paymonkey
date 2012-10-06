@@ -16,7 +16,6 @@ class Home extends MY_Controller {
 		 */
 		$this->title = "Yaaaaa";
 		$this->keywords = "arny, arnodo";
-
 		
 		$this->_render('pages/home');
 	}
