@@ -3,12 +3,17 @@ background-color:#e7ebf5;
 border-radius:5px;
 -moz-border-radius:5px;
 -webkit-border-radius:5px;
+cursor:pointer;
 float:left;
 height:55px;
 list-style:none;
 margin:5px;
 position:relative;
 width:190px;
+}
+
+.friend-box:hover {
+background-color:#a3e0ff;
 }
 
 .picked {
