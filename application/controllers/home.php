@@ -26,15 +26,13 @@ class Home extends MY_Controller {
 	public function add_friends(){
 		$this->load->model('friend_model');
 		$this->load->model('group_model');
-
 		$userid = $this->session->userdata['userid'];
 		$group_id = $this->group_model->create_group($userid);
-
 		$allfriends = $this->input->post('allfriends');
 		$temp_friends = explode(",", $allfriends);
 		$friends = array();
 		for ($i=0; $i < count($temp_friends); $i=$i+2) { 
-			if($temp_friends[$i] != '') {
+			if ($temp_friends[$i] != '') {
 				$fbid = $temp_friends[$i];
 				$name = $temp_friends[($i+1)];
 				$friends[$fbid] = $name;
@@ -42,10 +40,8 @@ class Home extends MY_Controller {
 				$this->group_model->add_group_payer($group_id, $friend_userid);
 			}
 		}
-
 		$num_users = count($friends);
 		$this->group_model->add_num_payees($group_id, $num_users);
-
 		$this->monkey_form($group_id);
 	}
 	
@@ -59,25 +55,20 @@ class Home extends MY_Controller {
 		$this->_render('pages/monkey_form');
 	}
 
-	//receives monkey form inputs and stores it
 	public function group_details() {
-
 		$date = $this->input->post('date');
 		$amount = $this->input->post('amount');
 		$paypal_email = $this->input->post('paypal_email');
 		$group_id = $this->input->post('group_id');
-
 		$this->load->model('group_model');
-
 		$this->group_model->add_group_details($group_id, $date, $amount, $paypal_email);
-
 		$this->dashboard();
-
 	}
 
 	public function dashboard() {
 		$this->title = "Monkey Dashboard";
 		$this->css[] = "dashboard.css";
+		$friends = $this->group_model->get_group_members();
 		$this->_render('pages/dashboard');
 	}
 }

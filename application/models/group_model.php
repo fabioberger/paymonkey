@@ -78,4 +78,13 @@ class Group_model extends CI_Model {
 
 	 }
 
+	function get_group_members() {
+		return array(
+			12312321=>"name last1",
+			32423534=>"name last2",
+			12312322=>"name last3",
+			12312323=>"name last4",
+			12312324=>"name last5"
+		);
+	}
 }
