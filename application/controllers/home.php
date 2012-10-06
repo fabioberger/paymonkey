@@ -66,7 +66,7 @@ class Home extends MY_Controller {
 		$this->load->model('group_model');
 		$this->group_model->add_group_details($group_id, $date, $amount, $paypal_email);
 		
-		
+		$friends = json_decode($this->input->post('friends'));
 		$this->_render('pages/dashboard');
 	}
 }
