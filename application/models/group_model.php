@@ -12,8 +12,8 @@ class Group_model extends CI_Model {
 
 	 	$data = array(
 	 		'lead_userid' => $userid,
-	 		'payment' => 0,
-	 		'num_payees' => 0
+	 		'total_amt' => 0,
+	 		'num_payers' => 0
 	 		);
 
 	 	$insert = $this->db->insert('groups', $data);
