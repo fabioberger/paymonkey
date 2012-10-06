@@ -64,4 +64,16 @@ class Group_model extends CI_Model {
 
 	 }
 
+	 function add_group_details($group_id, $date, $amount, $paypal_email) {
+
+	 	$data = array(
+	 		'total_amount' => $amount,
+	 		);
+
+	 	$this->db->where('groupid', $group_id);
+	 	$this->db->update('groups', $data);
+
+
+	 }
+
 }

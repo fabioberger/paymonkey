@@ -6,18 +6,18 @@
 </div>
 <div class="modal-body">
 <div id="monkeyform_content">
-<form id="monkeyform" class="form-horizontal">
+<form id="monkeyform" class="form-horizontal" action="POST" action="/home/group_details/">
 <div class="control-group">
 <label class="control-label" for="inputEmail">Paypal Email</label>
 <div class="controls">
-<input type="text" id="inputEmail" placeholder="Paypal Email">
+<input name="paypal_email" type="text" id="inputEmail" placeholder="Paypal Email">
 </div>
 </div>
 <div class="control-group">
 <label class="control-label" for="inputPassword">Amount Per Person</label>
 <div class="controls">
 <div class="input-prepend">
-<span class="add-on">$</span><input class="span2" id="prependedInput" size="16" type="text" placeholder="19.00">
+<span class="add-on">$</span><input name="amount" class="span2" id="prependedInput" size="16" type="text" placeholder="19.00">
 </div>
 </div>
 </div>
@@ -25,9 +25,10 @@
 <label class="control-label" for="dp1">Payment Due Date</label>
 <div class="controls">
 <div class="input-append date" id="dp1" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-<input id="duedate" class="span2" size="16" type="text" value="12-02-2012" readonly="">
+<input name="date" id="duedate" class="span2" size="16" type="text" value="12-02-2012" readonly="">
 <span class="add-on"><i class="icon-calendar"></i></span>
 </div>
+<input type="hidden" name="group_id" value="<?=$group_id; ?>" >
 </div>
 </div>
 <div class="control-group">

@@ -45,15 +45,38 @@ class Home extends MY_Controller {
 		$num_users = count($friends);
 		$this->group_model->add_num_payees($group_id, $num_users);
 
-		$this->monkey_form();
+		$this->monkey_form($group_id);
 	}
 	
-	public function monkey_form(){
+	public function monkey_form($group_id){
 		$this->title = "MonkeyForm";
 		$this->css[] = "datepicker.css";
 		$this->css[] = "monkey_form.css";
 		$this->javascript[] = "bootstrap-datepicker.js";
 		$this->javascript[] = "monkey_form.js";
+		$this->data['group_id'] = $group_id;
 		$this->_render('pages/monkey_form');
+	}
+
+	//receives monkey form inputs and stores it
+	public function group_details() {
+
+		$date = $this->input->post('date');
+		$amount = $this->input->post('amount');
+		$paypal_email = $this->input->post('paypal_email');
+		$group_id = $this->input->post('group_id');
+
+		$this->load->model('group_model');
+
+		$this->group_model->add_group_details($group_id, $date, $amount, $paypal_email);
+
+		$this->dashboard();
+
+	}
+
+	public function dashboard() {
+
+		$this->_render('pages/dashboard');
+
 	}
 }
