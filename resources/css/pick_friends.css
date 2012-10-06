@@ -17,8 +17,10 @@ background-color:#888;
 
 .friend-name {
 float:left;
+height:22px;
 margin-left:5px;
-margin-top:5px;
+margin-top:18px;
+overflow:hidden;
 width:130px;
 }
 
@@ -32,7 +34,7 @@ width:45px;
 
 .checker {
 position:absolute;
-right:0;
+right:3px;
 top:0;
 }
 
