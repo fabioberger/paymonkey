@@ -49,13 +49,13 @@ class Facebook_connect extends CI_Controller {
 			//now validate the user on our end
 			$validated = $this->_validateUser($fb_userid);
 			if($validated == true) {
-					redirect('/'); 
+					redirect('/home/'); 
 				}
 		}
 		else {
 			//error logging in user
 			$this->session->set_userdata('error', 'failed');
-			redirect('/');
+			redirect('/home/');
 		}	
 		
 	}
