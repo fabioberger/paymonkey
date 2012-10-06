@@ -20,10 +20,9 @@
 	?>
 	</ul>
 
-	
-
-
-
+</div>
+<div class="span4">
+	<button class="btn btn-primary">Continue</button>
 </div>
 </div>
 </section>
