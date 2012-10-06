@@ -4,7 +4,7 @@
 <h1>Add Friends to your group!</h1>
 </div>
 <div class="row">
-<div class="span4">
+<div class="span9">
 
 	<ul class='cThumbList'>
 	<?php 
@@ -21,8 +21,10 @@
 	</ul>
 
 </div>
-<div class="span4">
+<div class="span2">
+	<div class="buttoner">
 	<button class="btn btn-primary">Continue</button>
+	</div>
 </div>
 </div>
 </section>
