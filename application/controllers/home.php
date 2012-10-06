@@ -39,7 +39,9 @@ class Home extends MY_Controller {
 	
 	public function monkey_form(){
 		$this->title = "MonkeyForm";
+		$this->css[] = "datepicker.css";
 		$this->css[] = "monkey_form.css";
+		$this->javascript[] = "bootstrap-datepicker.js";
 		$this->javascript[] = "monkey_form.js";
 		$this->_render('pages/monkey_form');
 	}
