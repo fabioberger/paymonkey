@@ -1,0 +1,17 @@
+.hero-unit {
+	padding: 40px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+.top-bottom-space-sm {
+	padding: 10px 0;
+}
+
+.payment-errors {
+	color: red;
+	margin-left: 50px;
+	font-size: 20px;
+}
