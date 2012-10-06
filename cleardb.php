@@ -1,5 +1,5 @@
 <?php
-$LOCAL = true;
+$LOCAL = false;
 
 if ($LOCAL) {
 	$url = parse_url("mysql://b9c25d6971cf1d:7e5b4676@us-cdbr-east-02.cleardb.com/heroku_cd07237f8c9079f?reconnect=true");
@@ -21,10 +21,10 @@ if (!$link) {
 	echo mysql_error();
 } else {
 	echo "<p>Successfully connected to the server '" . $server . "'</p>\n";
-	printf("MySQL client info: %s\n", mysql_get_client_info());
-	printf("MySQL host info: %s\n", mysql_get_host_info());
-	printf("MySQL server version: %s\n", mysql_get_server_info());
-	printf("MySQL protocol version: %s\n", mysql_get_proto_info());
+	printf("<p>MySQL client info: %s</p>\n", mysql_get_client_info());
+	printf("<p>MySQL host info: %s</p>\n", mysql_get_host_info());
+	printf("<p>MySQL server version: %s</p>\n", mysql_get_server_info());
+	printf("<p>MySQL protocol version: %s</p>\n", mysql_get_proto_info());
 }
 
 if ($link && !$db) {
