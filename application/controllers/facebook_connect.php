@@ -139,15 +139,17 @@ class Facebook_connect extends CI_Controller {
 		
 		//set users avatar & thumb
 		$avatar_remote = $facebook->getUserAvatar();
+		/*
 		if($avatar_remote) {
 			$avatar_basic['full_url'] = $avatar_remote;
 			$avatar = $this->processFBAvatar($avatar_remote, $userid);
 			
 			if(!$avatar) $avatar = $avatar_basic;
 		}
+		*/
 		
-		$this->user_model->setAvatar($userid, $avatar['full_url']);
-		$this->user_model->setThumb($userid, $avatar['thumb_url']);
+		$this->user_model->setAvatar($userid, $avatar_remote);
+		//$this->user_model->setThumb($userid, $avatar['thumb_url']);
 		
 		return true;
 		
