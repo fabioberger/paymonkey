@@ -24,13 +24,19 @@ class Home extends MY_Controller {
 	}
 
 	public function add_friends(){
+		$this->load->model('friend_model');
+
 		$allfriends = $this->input->post('allfriends');
 		$temp_friends = explode(",", $allfriends);
 		for ($i=0; $i < count($temp_friends); $i=$i+2) { 
 			if($temp_friends[$i] != '') {
-				$friends[$temp_friends[$i]] = $temp_friends[($i+1)];
+				$fbid = $temp_friends[$i];
+				$name = $temp_friends[($i+1)];
+				$friends[$fbid] = $name;
+				$this->friend_model->add_friend($name, $fbid);
 			}
 		}
+
 
 		$this->data['friends'] = $friends;
 		$this->title = "Dashboard";

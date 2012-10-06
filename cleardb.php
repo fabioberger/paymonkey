@@ -83,12 +83,14 @@ if (!$result) {
 }
 }
 
+/*
 $query = "ALTER TABLE users ADD fbid int(50);";
 
 $result = mysql_query($query);
 if (!$result) {
 	echo mysql_error() . "\n";
 }
+*/
 
 
 ?>
