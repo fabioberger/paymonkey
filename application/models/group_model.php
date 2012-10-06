@@ -31,7 +31,7 @@ class Group_model extends CI_Model {
 	 	$this->db->select('paymentid');
 		$this->db->where('userid', $userid);
 		$this->db->where('groupid', $groupid);
-		$query = $this->db->get('group_payers');
+		$query = $this->db->get('payments');
 
 		$result = $query->num_rows();
 
@@ -43,7 +43,7 @@ class Group_model extends CI_Model {
 		 		'paid' => 0
 		 		);
 
-		 	$insert = $this->db->insert('group_payers', $data);
+		 	$insert = $this->db->insert('payments', $data);
 
 		 	if(!$insert) { return false; }
 
