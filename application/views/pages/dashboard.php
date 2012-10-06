@@ -7,7 +7,7 @@
 <div class="span6">
 <h3>Amount Collected</h3>
 <div class="progress active">
-<div class="bar" style="width:40%;"></div>
+<div class="bar" style="width:40%"></div>
 </div>
 </div>
 <div class="span6">
