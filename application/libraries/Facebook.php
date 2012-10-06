@@ -150,6 +150,23 @@ class Facebook {
 		
 	}
 
+	public function getFriends() {
+		
+		$user	= $this->facebook->getUser();
+		
+		try 
+		{
+			$friends = $this->facebook->api('/me/friends');
+			
+			return $friends;
+		}
+		catch (FacebookApiException $e)
+		{
+			return false;
+		}
+		
+	}
+
 	
 	//generates Facebook Login URL
 	public function loginUrl() {

@@ -6,6 +6,8 @@
 <div class="row">
 <div class="span4">
 	Put friend selector here!
+
+	<?php print_r($friends); ?>
 </div>
 </div>
 </section>
