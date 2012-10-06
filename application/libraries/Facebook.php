@@ -160,8 +160,6 @@ class Facebook {
 	                'redirect_uri'  => $this->CI->config->item('fb_baseurl')
 	            )
 	    );
-
-	    echo "test";
 	
 		return $loginUrl;
 		
