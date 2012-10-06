@@ -25,7 +25,11 @@ class Home extends MY_Controller {
 
 	public function add_friends(){
 		$allfriends = $this->input->post('allfriends');
-		$friends = explode(",", $allfriends);
+		$temp_friends = explode(",", $allfriends);
+		foreach($temp_friends as $friend) {
+			$pieces = explode("|", $friend);
+			$friends[$pieces[0]] = $pieces[1];
+		}
 
 		$this->data['friends'] = $friends;
 		$this->title = "Dashboard";
