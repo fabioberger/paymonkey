@@ -23,7 +23,9 @@ Paypal email (edit)</br/>
 </div>
 <div class="row">
 <?php
-foreach($members as $friend_id => $friend_name) {
+foreach($members as $friend_data) {
+$friend_id = $friend_data['fbid'];
+$friend_name = $friend_data['name'];
 ?>
 <div class="span2">
 <div class="member">
