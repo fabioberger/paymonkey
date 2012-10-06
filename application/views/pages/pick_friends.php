@@ -20,10 +20,14 @@
 	?>
 	</ul>
 
+	<form name="realform" method="post" action="/home/add_friends/">
+		<input type="hidden" name="allfriends" value="" />
+	</form>
+
 </div>
 <div class="span2">
 	<div class="buttoner">
-	<button class="btn btn-primary">Continue</button>
+	<button class="btn btn-primary" onClick="submiter();">Continue</button>
 	</div>
 </div>
 </div>

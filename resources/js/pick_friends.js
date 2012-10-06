@@ -33,14 +33,6 @@
 		document.realform.submit();
 		
 		}
-		else {
-			<?php if($signup == "no") { ?>
-			window.location = "/community/friends/InviteFrame/";
-			<?php }
-			else { ?>
-			window.location = "/community/profile/?first=1";
-			<?php } ?>
-		}
 		
 		
 	}
