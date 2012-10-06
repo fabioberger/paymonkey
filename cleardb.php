@@ -52,7 +52,7 @@ if ($db) {
 	}
 }
 
-$CREATETABLES = false;
+$CREATETABLES = true;
 
 if ($CREATETABLES) {
 
