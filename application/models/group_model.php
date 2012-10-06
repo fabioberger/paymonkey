@@ -32,7 +32,7 @@ class Group_model extends CI_Model {
 		$this->db->where('userid', $userid);
 		$this->db->where('groupid', $groupid);
 		$query = $this->db->get('payments');
-
+		var_dump($userid, $groupid);
 		$result = $query->num_rows();
 
 		if($result == 0) { 
@@ -79,9 +79,6 @@ class Group_model extends CI_Model {
 	 }
 
 	function get_group_members($group_id) {
-	/*
-	stdClass Object ( [paymentid] => 691 [userid] => 681 [groupid] => 371 [paid] => 0 [paid_date] => 0000-00-00 00:00:00 [pay_amt] => 0 ) stdClass Object ( [paymentid] => 701 [userid] => 1 [groupid] => 371 [paid] => 0 [paid_date] => 0000-00-00 00:00:00 [pay_amt] => 0 ) stdClass Object ( [paymentid] => 711 [userid] => 691 [groupid] => 371 [paid] => 0 [paid_date] => 0000-00-00 00:00:00 [pay_amt] => 0 ) ­
-	*/
 		$query = $this->db->get_where('payments', array('groupid' => $group_id));
 		$users = array();
 		foreach ($query->result_array() as $row) {
