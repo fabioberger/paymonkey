@@ -24,7 +24,7 @@ class Home extends MY_Controller {
 		$this->_render('pages/pick_friends');
 	}
 	
-	public function monkey_form($group_id){
+	public function monkey_form(){
 		$this->title = "MonkeyForm";
 		$this->css[] = "datepicker.css";
 		$this->css[] = "monkey_form.css";
