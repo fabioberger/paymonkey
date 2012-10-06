@@ -1,57 +1,41 @@
 .friend-box {
-	background-color: #e7ebf5;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius:5px;
-	width: 190px;
-	height: 55px;
-	float:left;
-	margin: 5px;
-	list-style: none;
+background-color:#e7ebf5;
+border-radius:5px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+float:left;
+height:55px;
+list-style:none;
+margin:5px;
+width:190px;
 }
 
 .picked {
-	background-color: #888;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius:5px;
-	width: 190px;
-	height: 55px;
-	float:left;
-	margin: 5px;
-	list-style: none;
+background-color:#888;
 }
 
 .friend-name {
-	float: right;
-	width: 75px;
-	margin-top:5px;
-}
-
-a {
-	color:black;
-	font-size:12px !important;
-	font-weight:normal !important;
+margin-top:5px;
+width:75px;
 }
 
 img.avatar {
-	margin-top: 5px;
-	margin-left: 5px;
+float:left;
+height:45px;
+margin-left:5px;
+margin-top:5px;
+width:45px;
 }
 
 .checker {
-	float: right;
-	margin-right: 5px;
-	margin-bottom: 5px;
+position:absolute;
+right:0;
+top:0;
 }
 
 ul.cThumbList {
-	height: 550px;
-	overflow-x:hidden; 
-	overflow-y:auto;
-	border:1px #888;
-}
-
-.buttoner {
-	padding-top:400px;
+border:1px #888;
+height:550px;
+overflow-x:hidden;
+overflow-y:auto;
 }
