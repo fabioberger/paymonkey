@@ -10,6 +10,11 @@ height:85px;
 width:180px;
 }
 
+.friend_img img {
+height:70px;
+width:70px;
+}
+
 .friend_name {
 font-weight:bold;
 height:15px;
