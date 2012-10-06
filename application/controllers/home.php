@@ -43,11 +43,10 @@ class Home extends MY_Controller {
 		}
 		$num_users = count($friends);
 		$this->group_model->add_num_payees($group_id, $num_users);
-		return $group_id;
+		$this->monkey_form($group_id);
 	}
 	
-	public function monkey_form(){
-		$group_id = $this->add_friends();
+	public function monkey_form($group_id){
 		$this->title = "MonkeyForm";
 		$this->css[] = "datepicker.css";
 		$this->css[] = "monkey_form.css";
@@ -68,7 +67,6 @@ class Home extends MY_Controller {
 	}
 
 	public function dashboard() {
-		$this->group_details();
 		$this->title = "Monkey Dashboard";
 		$this->css[] = "dashboard.css";
 		$friends = $this->group_model->get_group_members();
