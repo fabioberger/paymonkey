@@ -14,3 +14,7 @@ width:183px;
 #duedate {
 width:178px;
 }
+
+.datepicker {
+z-index:1200;
+}
