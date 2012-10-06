@@ -44,7 +44,7 @@ $friend_name = $friend_data['name'];
 <br/><br/>
 <h2>Paid Example</h2>
 <a href="http://paymonkey.herokuapp.com/pay/?payerid=871&groupid=481" target="_blank">http://paymonkey.herokuapp.com/pay/?payerid=871&groupid=481</a>
-<br/>
+<br/><br/>
 <h2>Unpaid Example</h2>
 <a href="http://paymonkey.herokuapp.com/pay/?payerid=841&groupid=481" target="_blank">http://paymonkey.herokuapp.com/pay/?payerid=841&groupid=481</a>
 </span>
