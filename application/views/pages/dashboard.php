@@ -5,9 +5,9 @@
 </div>
 <div class="row">
 <div class="span6">
-<h3>Amount Collected</h3>
-<div class="progress active">
-<div class="bar" style="width:40%"></div>
+<h3>Amount Collected ($)</h3>
+<div class="progress">
+<div class="bar" style="width:33%"></div>
 </div>
 </div>
 <div class="span6">
