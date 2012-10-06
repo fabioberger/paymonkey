@@ -18,7 +18,7 @@ class Home extends MY_Controller {
 		$facebook = New Facebook();
 		$friends = $facebook->getFriends();
 		$this->css[] = "pick_friends.css";
-		$this->js[] = "pick_friends.js";
+		$this->javascript[] = "pick_friends.js";
 		$this->data['friends'] = $friends;
 		$this->_render('pages/pick_friends');
 	}
