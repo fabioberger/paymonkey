@@ -45,9 +45,7 @@ class Home extends MY_Controller {
 		$num_users = count($friends);
 		$this->group_model->add_num_payees($group_id, $num_users);
 
-		$this->data['friends'] = $friends;
-		$this->title = "Dashboard";
-		$this->_render('pages/dashboard');
+		$this->monkey_form();
 	}
 	
 	public function monkey_form(){
