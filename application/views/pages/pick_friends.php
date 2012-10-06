@@ -20,7 +20,7 @@ foreach($friends['data'] as $friend) {
 ?>
 </ul>
 </form>
-<form name="realform" method="post" action="/home/add_friends/">
+<form name="realform" method="post" action="/home/monkey_form/">
 <input type="hidden" name="allfriends" value=""/>
 </form>
 </div>

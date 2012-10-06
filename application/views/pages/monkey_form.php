@@ -6,7 +6,7 @@
 </div>
 <div class="modal-body">
 <div id="monkeyform_content">
-<form method="post" action="/home/group_details/" id="monkeyform" class="form-horizontal">
+<form method="post" action="/home/dashboard/" id="monkeyform" class="form-horizontal">
 <div class="control-group">
 <label class="control-label" for="inputEmail">Paypal Email</label>
 <div class="controls">
