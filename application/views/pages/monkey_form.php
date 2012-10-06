@@ -1,7 +1,7 @@
 <div class="container">
 <section id="typography">
 <div id="monkeyform_content">
-<form class="form-horizontal">
+<form id="monkeyform" class="form-horizontal">
 <div class="control-group">
 <label class="control-label" for="inputEmail">Paypal Email</label>
 <div class="controls">
