@@ -76,8 +76,8 @@ class Home extends MY_Controller {
 	}
 
 	public function dashboard() {
-
+		$this->title = "Monkey Dashboard";
+		$this->css[] = "dashboard.css";
 		$this->_render('pages/dashboard');
-
 	}
 }
