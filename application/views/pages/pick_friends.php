@@ -14,7 +14,7 @@
 		<li class='friend-box' id='friend$friendid' onClick='if(this.getAttribute(\"class\") == \"friend-box\") { deselect($friendid); } else { select($friendid); }'>
 					<img alt='$displayName' title='' src='http://graph.facebook.com/<?=$friend['id']; ?>/picture' class='avatar' width='45' height='45' />
 					<span class='friend-name'><?=$friend['name']; ?></span>
-					<input id='box$friendid' name='box' type='checkbox' value='$friendid' checked='true' class='checker' />
+					<input id='box$friendid' name='box' type='checkbox' value='$friendid' checked='false' class='checker' />
 					</li>
 		<?php
 	}
