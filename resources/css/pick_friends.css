@@ -4,3 +4,36 @@
 	-moz-border-radius: 5px;
 	-webkit-border-radius:5px;
 }
+
+.friend-name {
+	float: right;
+	width: 75px;
+	margin-top:5px;
+}
+
+a {
+	color:black;
+	font-size:12px !important;
+	font-weight:normal !important;
+}
+
+img.avatar {
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.checker {
+	float: right;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+ul.cThumbList {
+	height: 415px;
+	overflow-x:hidden !important; 
+	overflow-y:auto !important;
+	border:1px #888;
+	width: 627px;
+	padding:0px !important;
+	margin:0px !important;
+}
