@@ -55,7 +55,6 @@ if ($db) {
 $CREATETABLES = true;
 
 if ($CREATETABLES) {
-echo "create";
 $query = 'CREATE TABLE `users` (
   `userid` int(14) NOT NULL AUTO_INCREMENT,"
   `name` varchar(100) NOT NULL,
@@ -66,7 +65,10 @@ $query = 'CREATE TABLE `users` (
   PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;';
 
-mysql_query($query);
+$result = mysql_query($query);
+if (!$result) {
+	echo mysql_error() . "\n";
+}
 
 $query = 'CREATE TABLE `fbconnect_users` (
   `id` int(14) NOT NULL AUTO_INCREMENT,
@@ -75,6 +77,9 @@ $query = 'CREATE TABLE `fbconnect_users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ';
 
-mysql_query($query);
+$result = mysql_query($query);
+if (!$result) {
+	echo mysql_error() . "\n";
+}
 }
 ?>
