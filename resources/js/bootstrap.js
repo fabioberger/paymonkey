@@ -729,6 +729,7 @@
   * ===================== */
 
   function hideWithTransition() {
+/*
     var that = this
       , timeout = setTimeout(function () {
           that.$element.off($.support.transition.end)
@@ -739,14 +740,17 @@
       clearTimeout(timeout)
       hideModal.call(that)
     })
+*/
   }
 
   function hideModal( that ) {
+/*
     this.$element
       .hide()
       .trigger('hidden')
 
     backdrop.call(this)
+*/
   }
 
   function backdrop( callback ) {
