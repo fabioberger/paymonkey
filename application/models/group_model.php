@@ -78,7 +78,11 @@ class Group_model extends CI_Model {
 
 	 }
 
-	function get_group_members() {
-		
+	function get_group_members($group_id) {
+		$this->db->select('userid');
+		$this->db->where('groupid', $group_id);
+		$query = $this->db->get('payments');
+		print_r($query);
+		return array();
 	}
 }
