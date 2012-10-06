@@ -92,7 +92,7 @@ if ($CREATETABLES) {
 	  `total_amt` int(10) NOT NULL,
 	  `num_payers` int(2) NOT NULL DEFAULT `0`,
 	  PRIMARY KEY (`groupid`)
-	) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;'
+	) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;';
 
 	$result = mysql_query($query);
 	if (!$result) {
@@ -107,7 +107,7 @@ if ($CREATETABLES) {
   `paid_date` datetime NOT NULL,
   `pay_amt` int(10) NOT NULL,
   PRIMARY KEY (`paymentid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;';
 
 	$result = mysql_query($query);
 	if (!$result) {
