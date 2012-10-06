@@ -46,11 +46,10 @@ img.avatar {
 }
 
 ul.cThumbList {
-	height: 615px;
+	height: 550px;
 	overflow-x:hidden; 
 	overflow-y:auto;
 	border:1px #888;
-	width: 900px;
 }
 
 .buttoner {
