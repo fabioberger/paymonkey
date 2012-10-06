@@ -55,8 +55,6 @@ if ($db) {
 $CREATETABLES = false;
 
 if ($CREATETABLES) {
-
-/*
 	$query = 'CREATE TABLE `users` (
 	  `userid` int(14) NOT NULL AUTO_INCREMENT,
 	  `name` varchar(100) NOT NULL,
@@ -84,15 +82,13 @@ if ($CREATETABLES) {
 		echo mysql_error() . "\n";
 	}
 
-	*/
-
 	$query = 'CREATE TABLE `groups` (
 	  `groupid` int(14) NOT NULL AUTO_INCREMENT,
 	  `lead_userid` int(14) NOT NULL,
 	  `total_amt` int(10) NOT NULL,
 	  `num_payers` int(2) NOT NULL DEFAULT 0,
 	  PRIMARY KEY (`groupid`)
-	) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;';
+	) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;';
 
 	$result = mysql_query($query);
 	if (!$result) {
@@ -100,38 +96,37 @@ if ($CREATETABLES) {
 	}
 
 	$query = 'CREATE TABLE `payments` (
-  `paymentid` int(14) NOT NULL AUTO_INCREMENT,
-  `userid` int(14) NOT NULL,
-  `groupid` int(14) NOT NULL,
-  `paid` tinyint(1) NOT NULL DEFAULT 0,
-  `paid_date` datetime NOT NULL,
-  `pay_amt` int(10) NOT NULL,
-  PRIMARY KEY (`paymentid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;';
+	  `paymentid` int(14) NOT NULL AUTO_INCREMENT,
+	  `userid` int(14) NOT NULL,
+	  `groupid` int(14) NOT NULL,
+	  `paid` tinyint(1) NOT NULL DEFAULT 0,
+	  `paid_date` datetime NOT NULL,
+	  `pay_amt` int(10) NOT NULL,
+	  PRIMARY KEY (`paymentid`)
+	) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;';
+
+	$result = mysql_query($query);
+	if (!$result) {
+		echo mysql_error() . "\n";
+	}
+}
+
+
+$ALTERTABLES = false;
+
+if ($ALTERTABLES) {
+	$query = "ALTER TABLE users ADD fbid int(50);";
 
 	$result = mysql_query($query);
 	if (!$result) {
 		echo mysql_error() . "\n";
 	}
 
+	$query = "ALTER TABLE groups ADD paypal_email varchar(150), ADD date date;";
+
+	$result = mysql_query($query);
+	if (!$result) {
+		echo mysql_error() . "\n";
+	}
 }
-
-/*
-$query = "ALTER TABLE users ADD fbid int(50);";
-
-$result = mysql_query($query);
-if (!$result) {
-	echo mysql_error() . "\n";
-}
-
-
-$query = "ALTER TABLE groups ADD paypal_email varchar(150), ADD date date;";
-
-$result = mysql_query($query);
-if (!$result) {
-	echo mysql_error() . "\n";
-}
-*/
-
-
 ?>
