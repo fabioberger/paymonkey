@@ -25,6 +25,10 @@ class Home extends MY_Controller {
 
 	public function add_friends(){
 		$this->load->model('friend_model');
+		$this->load->model('group_model');
+
+		$userid = $this->session->userdata['userid'];
+		$group_id = $this->group_model->create_group($userid);
 
 		$allfriends = $this->input->post('allfriends');
 		$temp_friends = explode(",", $allfriends);
@@ -33,10 +37,13 @@ class Home extends MY_Controller {
 				$fbid = $temp_friends[$i];
 				$name = $temp_friends[($i+1)];
 				$friends[$fbid] = $name;
-				$this->friend_model->add_friend($name, $fbid);
+				$friend_userid = $this->friend_model->add_friend($name, $fbid);
+				$this->group_model->add_group_payer($group_id, $friend_userid);
 			}
 		}
 
+		$num_users = count($friends);
+		$this->group_model->add_num_payees($group_id, $num_users);
 
 		$this->data['friends'] = $friends;
 		$this->title = "Dashboard";

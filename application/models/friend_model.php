@@ -31,6 +31,10 @@ class Friend_model extends CI_Model {
 			
 			if(!$insert) { return false; } 
 
+			$friend_userid = $this->db->insert_id();
+
+			return $friend_userid;
+
 		}
 		
 		return true;
