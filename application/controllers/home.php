@@ -10,7 +10,7 @@ class Home extends MY_Controller {
 	public function reference(){
 		$this->title = "Yaaaaa";
 		$this->keywords = "arny, arnodo";
-		$this->_render('pages/home');
+		$this->_render('pages/reference');
 	}
 
 	public function pick_friends(){
