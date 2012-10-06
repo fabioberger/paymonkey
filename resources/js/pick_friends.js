@@ -2,14 +2,14 @@
 	function deselect(id) {
 		var namer = "box"+id;
 		var liname = "friend"+id;
-		document.getElementById(liname).setAttribute('class', 'picked'); 
+		//document.getElementById(liname).setAttribute('class', 'picked'); 
 		document.getElementById(namer).checked = false;
 	}
 	
 	function select(id) {
 		var namer = "box"+id;
 		var liname = "friend"+id;
-		document.getElementById(liname).setAttribute('class', 'friend-box'); 
+		//document.getElementById(liname).setAttribute('class', 'friend-box'); 
 		document.getElementById(namer).checked = true;
 	}
 	
