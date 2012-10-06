@@ -11,7 +11,7 @@ class Friend_model extends CI_Model {
 
 	function add_friend($name, $fbid) {
 
-		$this->db->select('name');
+		$this->db->select('userid');
 		$this->db->where('fbid', $fbid);
 		$query = $this->db->get('users');
 
@@ -36,9 +36,12 @@ class Friend_model extends CI_Model {
 			return $friend_userid;
 
 		}
+		$result  = $query->row();
+		if ($result->userid) {
+			return $result->userid;
+		}
 		
-		return true;
-
+		return false;
 	}
 
 
