@@ -5,16 +5,15 @@
 </div>
 <div class="row">
 <div class="span4">
-	Put friend selector here!
 
 	<ul class='cThumbList'>
 	<?php 
 	foreach($friends['data'] as $friend) {
 		?>
-		<li class='friend-box' id='friend$friendid' onClick='if(this.getAttribute(\"class\") == \"friend-box\") { deselect($friendid); } else { select($friendid); }'>
+		<li class='friend-box' id='friend<?=$friend['id']; ?>' onClick='if(this.getAttribute(\"class\") == \"friend-box\") { deselect(<?=$friend['id']; ?>); } else { select(<?=$friend['id']; ?>); }'>
 					<img alt='<?=$friend['name']; ?>' title='' src='http://graph.facebook.com/<?=$friend['id']; ?>/picture' class='avatar' width='45' height='45' />
 					<span class='friend-name'><?=$friend['name']; ?></span>
-					<input id='box$friendid' name='box' type='checkbox' value='$friendid' checked='false' class='checker' />
+					<input id='box<?=$friend['id']; ?>' name='box' type='checkbox' value='<?=$friend['id']; ?>' class='checker' />
 					</li>
 		<?php
 	}
