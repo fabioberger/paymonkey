@@ -1,5 +1,5 @@
 <div class="container">
-	<section id="typography">
+<section id="typography">
   <div class="page-header">
     <h1>Typography <small>Headings, paragraphs, lists, and other inline type elements</small></h1>
   </div>
@@ -275,4 +275,3 @@
   </div><!-- /row -->
 </section>
 </div>
-
