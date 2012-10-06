@@ -115,7 +115,7 @@ if ($CREATETABLES) {
 $ALTERTABLES = false;
 
 if ($ALTERTABLES) {
-	$query = "ALTER TABLE users ADD fbid int(50);";
+	$query = "ALTER TABLE users ADD fbid bigint;";
 
 	$result = mysql_query($query);
 	if (!$result) {
