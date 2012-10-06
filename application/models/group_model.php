@@ -68,6 +68,8 @@ class Group_model extends CI_Model {
 
 	 	$data = array(
 	 		'total_amount' => $amount,
+	 		'paypal_email' => $paypal_email,
+	 		'date' => $date
 	 		);
 
 	 	$this->db->where('groupid', $group_id);
