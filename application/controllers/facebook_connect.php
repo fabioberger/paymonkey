@@ -39,6 +39,8 @@ class Facebook_connect extends CI_Controller {
 	
 	public function connect() {
 		
+		echo "worked!";
+		/*
 		$facebook = new Facebook();
 		
 		$fb_userid = $facebook->getUser();
@@ -57,6 +59,7 @@ class Facebook_connect extends CI_Controller {
 			$this->session->set_userdata('error', 'failed');
 			redirect('/home/');
 		}	
+		*/
 		
 	}
 	
