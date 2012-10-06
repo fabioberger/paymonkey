@@ -28,7 +28,8 @@
 <input name="date" id="duedate" class="span2" size="16" type="text" value="2012-02-12" readonly="">
 <span class="add-on"><i class="icon-calendar"></i></span>
 </div>
-<input type="hidden" name="group_id" value="<?=$group_id; ?>" >
+<input type="hidden" name="group_id" value="<?=$group_id; ?>"/>
+<input type="hidden" name="friends" value="<?=$friends; ?>"/>
 </div>
 </div>
 <div class="control-group">
