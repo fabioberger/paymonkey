@@ -49,7 +49,7 @@ class Facebook_connect extends CI_Controller {
 			//now validate the user on our end
 			$validated = $this->_validateUser($fb_userid);
 			if($validated == true) {
-					redirect('/home/'); 
+					redirect('/home/find_friends/'); 
 				}
 		}
 		else {
