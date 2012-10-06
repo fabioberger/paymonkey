@@ -7,7 +7,16 @@
 <div class="span4">
 	Put friend selector here!
 
-	<?php print_r($friends); ?>
+	<ul>
+	<?php 
+	foreach($friends as $friend) {
+		?><li></li><?php
+	}
+	?>
+	</ul>
+
+
+
 </div>
 </div>
 </section>
