@@ -6,7 +6,7 @@
 <div class="row">
 <div class="span6">
 <h3>Amount Collected</h3>
-<div class="progress progress-striped active">
+<div class="progress active">
 <div class="bar" style="width:40%;"></div>
 </div>
 </div>
@@ -23,13 +23,6 @@ Paypal email (edit)</br/>
 </div>
 <div class="row">
 <?php
-$friends = array(
-	12312321=>"name last1",
-	32423534=>"name last2",
-	12312322=>"name last3",
-	12312323=>"name last4",
-	12312324=>"name last5"
-);
 foreach($friends as $friend_id => $friend_name) {
 ?>
 <div class="span2">
