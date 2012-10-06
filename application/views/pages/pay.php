@@ -16,6 +16,14 @@
 		<div class="span9">
 			<form action="" method="POST" id="payment-form">
 				<div class="form-row">
+					<label>Name:</label>
+					<i class="special-msg">Insert users name here that we receive from group leader</i>				
+				</div>
+				<div class="form-row">
+					<label>Email:</label>
+					<input name="email" type="text" size="20" autocomplete="off" class="card-number"/>				
+				</div>
+				<div class="form-row">
 					<label>Card Number</label>
 					<input type="text" size="20" autocomplete="off" class="card-number"/>				
 				</div>

@@ -15,3 +15,13 @@ h2 {
 	margin-left: 50px;
 	font-size: 20px;
 }
+
+.form-row label {
+	font-weight:bold;
+}
+
+.special-msg {
+	padding: 10px;
+	font-size: 120%;
+	display:inline-block;
+}
