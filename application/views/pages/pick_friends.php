@@ -6,6 +6,7 @@
 <div class="row">
 <div class="span9">
 
+	<form name="friendpick" method="post" action="#">
 	<ul class='cThumbList'>
 	<?php 
 	foreach($friends['data'] as $friend) {
@@ -19,6 +20,7 @@
 	}
 	?>
 	</ul>
+	</form>
 
 	<form name="realform" method="post" action="/home/add_friends/">
 		<input type="hidden" name="allfriends" value="" />
