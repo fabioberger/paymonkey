@@ -79,10 +79,21 @@ class Group_model extends CI_Model {
 	 }
 
 	function get_group_members($group_id) {
+	/*
+	stdClass Object ( [paymentid] => 691 [userid] => 681 [groupid] => 371 [paid] => 0 [paid_date] => 0000-00-00 00:00:00 [pay_amt] => 0 ) stdClass Object ( [paymentid] => 701 [userid] => 1 [groupid] => 371 [paid] => 0 [paid_date] => 0000-00-00 00:00:00 [pay_amt] => 0 ) stdClass Object ( [paymentid] => 711 [userid] => 691 [groupid] => 371 [paid] => 0 [paid_date] => 0000-00-00 00:00:00 [pay_amt] => 0 ) ­
+	*/
 		$query = $this->db->get_where('payments', array('groupid' => $group_id));
-		foreach ($query->result() as $row) {
-			print_r($row);
+		$users = array();
+		foreach ($query->result_array() as $row) {
+			$users[$row['userid']] = $row['userid'];
 		}
-		return array();
+		$this->db->select('*');
+		$this->db->where_in('userid', $users);
+		$query = $this->db->get('users');
+		foreach ($this->db->result_array() as $full_user_data) {
+			$users[$full_user_data['userid']] = $full_user_data;
+		}
+		var_dump($users);
+		return $users;
 	}
 }
