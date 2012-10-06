@@ -7,7 +7,59 @@ class UserLib {
 	public function __construct()
 	{
 		$this->CI =& get_instance();
+		$this->CI->load->model('user_model');
 		$this->CI->load->model('userlib_model');
+	}
+
+	public function getUser($userid) {
+
+		if(empty($userid) || !is_int($userid)) return false;
+
+		$user = $this->CI->user_model->getDetails($userid);
+
+		return $user;
+	}
+
+	public function getPaid($userid, $groupid) {
+
+		if(empty($groupid) || !is_int($groupid)) return false;
+		if(empty($userid) || !is_int($userid)) return false;
+
+		$paid = (float) $this->CI->user_model->getPaid($userid, $groupid);
+
+		return $paid;
+	}
+
+	public function getIndividualAmount($groupid) {
+
+		if(empty($groupid) || !is_int($groupid)) return false;
+
+		$total_amt = (float) $this->CI->user_model->getTotalAmt($groupid);
+		$num_payers = (float) $this->CI->user_model->getNumPayers($groupid);
+
+		$amt = $total_amt / $num_payers;
+
+		return $amt;
+	}
+
+	public function setEmail($userid, $email) {
+
+		if(empty($userid) || !is_int($userid)) return false;
+
+		$success = $this->CI->user_model->setEmail($userid, $email);
+
+		return $success;
+	}
+
+
+	public function setPaid($payerid, $groupid, $paid, $unix_time) {
+
+		if(empty($payerid) || !is_int($payerid)) return false;
+		if(empty($groupid) || !is_int($groupid)) return false;
+
+		$success = $this->CI->user_model->setPaid($payerid, $groupid, $paid, $unix_time);
+
+		return $success;
 	}
 	
 	

@@ -39,16 +39,19 @@ class User_model extends CI_Model {
 	//select name, points, userid and avatar for a user
 	function getDetails($userid)
 	{
+		//create new object
+		$userDetails = new stdClass();
+
 		//add user id
 		$userDetails->userid = $userid;
 		
 		//get thumb
-		$userDetails->thumb = $this->getThumb($userid);
+		//$userDetails->thumb = $this->getThumb($userid);
 
 		//get Avatar
 		$userDetails->avatar = $this->getAvatar($userid);
 		
-		$this->db->select('name, points');
+		$this->db->select('name, email, username');
 		$this->db->where('userid', $userid);
 		$query = $this->db->get('users');
 		
@@ -56,7 +59,8 @@ class User_model extends CI_Model {
 		{
 			$result = $query->row();
 			$userDetails->name = $result->name;
-			$userDetails->points = $result->points;
+			$userDetails->email = $result->email;
+			$userDetails->username = $result->username;
 
 		}
 		
@@ -81,6 +85,42 @@ class User_model extends CI_Model {
 			if($result->avatar=="") $result->avatar =  $this->config->item('default_avatar');		
 	
 			return $result->avatar;
+		}
+		
+		return false;
+		
+	}
+
+	function getTotalAmt($groupid)
+	{
+	
+		$this->db->select('total_amt');
+		$this->db->where('groupid', $groupid);
+		$query = $this->db->get('groups');
+		
+		if($query->num_rows() == 1)
+		{
+			$result = $query->row();
+	
+			return $result->total_amt;
+		}
+		
+		return false;
+		
+	}
+
+	function getNumPayers($groupid)
+	{
+	
+		$this->db->select('num_payers');
+		$this->db->where('groupid', $groupid);
+		$query = $this->db->get('groups');
+		
+		if($query->num_rows() == 1)
+		{
+			$result = $query->row();
+	
+			return $result->num_payers;
 		}
 		
 		return false;
@@ -135,6 +175,50 @@ class User_model extends CI_Model {
 		
 		$this->db->where('userid', $userid);
 		$this->db->update('users', $data);
+		
+		return true;
+		
+	}
+
+	function setEmail($userid, $email)
+	{
+		
+		$data = array('email' => $email);
+		
+		$this->db->where('userid', $userid);
+		$this->db->update('users', $data);
+		
+		return true;
+		
+	}
+
+	function getPaid($userid, $groupid)
+	{
+		
+		$this->db->select('paid');
+		$this->db->where('userid', $userid, 'groupid', $groupid);
+		$query = $this->db->get('payments');
+
+		if($query->num_rows() == 1)
+		{
+			$result = $query->row();
+			return $result->paid;
+		}
+		
+		return false;
+		
+	}
+
+	function setPaid($payerid, $groupid, $paid, $unix_time)
+	{
+		
+		$datetime = date("Y-m-d H:i:s", $unix_time);
+
+		$data = array('paid' => $paid,
+					  'paid_date' => $datetime);
+		
+		$this->db->where('userid', $payerid);
+		$this->db->update('payments', $data);
 		
 		return true;
 		
