@@ -36,7 +36,7 @@ if ($db) {
 		echo mysql_error();
 	} else {
 		echo "<p>Successfully connected to the database '" . $db . "'</p>\n";
-		$sql = "SHOW TABLES FROM `$database`";
+		$sql = "SHOW TABLES FROM `$db`";
 		$result = mysql_query($sql);
 		if (mysql_num_rows($result) > 0) {
 			echo "<p>Available tables:</p>\n";
@@ -52,7 +52,7 @@ if ($db) {
 	}
 }
 
-$CREATETABLES = true;
+$CREATETABLES = false;
 
 if ($CREATETABLES) {
 $query = 'CREATE TABLE `users` (
