@@ -32,6 +32,7 @@ class Home extends MY_Controller {
 
 		$allfriends = $this->input->post('allfriends');
 		$temp_friends = explode(",", $allfriends);
+		$friends = array();
 		for ($i=0; $i < count($temp_friends); $i=$i+2) { 
 			if($temp_friends[$i] != '') {
 				$fbid = $temp_friends[$i];
