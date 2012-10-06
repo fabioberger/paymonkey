@@ -65,14 +65,7 @@ class Home extends MY_Controller {
 		$this->load->model('group_model');
 		$this->group_model->add_group_details($group_id, $date, $amount, $paypal_email);
 		
-		$friends = array(
-			12312321=>"name last1",
-			32423534=>"name last2",
-			12312322=>"name last3",
-			12312323=>"name last4",
-			12312324=>"name last5"
-		);
-		$this->data['friends'] = $friends;
+		$this->data['members'] = $this->group_model->get_group_members();
 		$this->_render('pages/dashboard');
 	}
 }

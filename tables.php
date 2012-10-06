@@ -35,6 +35,7 @@ function display_db_query($query_string, $connection, $header_bool, $table_param
 
 function display_db_table($tablename, $connection, $header_bool, $table_params) {
 	$query_string = "SELECT * FROM $tablename";
+	echo "<h1>$tablename</h1>";
 	display_db_query($query_string, $connection, $header_bool, $table_params);
 }
 

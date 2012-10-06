@@ -77,4 +77,8 @@ class Group_model extends CI_Model {
 
 
 	 }
+
+	function get_group_members() {
+		
+	}
 }

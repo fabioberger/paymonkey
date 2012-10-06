@@ -23,7 +23,7 @@ Paypal email (edit)</br/>
 </div>
 <div class="row">
 <?php
-foreach($friends as $friend_id => $friend_name) {
+foreach($members as $friend_id => $friend_name) {
 ?>
 <div class="span2">
 <div class="member">
