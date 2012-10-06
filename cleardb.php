@@ -90,7 +90,7 @@ if ($CREATETABLES) {
 	  `groupid` int(14) NOT NULL AUTO_INCREMENT,
 	  `lead_userid` int(14) NOT NULL,
 	  `total_amt` int(10) NOT NULL,
-	  `num_payers` int(2) NOT NULL DEFAULT `0`,
+	  `num_payers` int(2) NOT NULL DEFAULT 0,
 	  PRIMARY KEY (`groupid`)
 	) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;';
 
@@ -103,7 +103,7 @@ if ($CREATETABLES) {
   `paymentid` int(14) NOT NULL AUTO_INCREMENT,
   `userid` int(14) NOT NULL,
   `groupid` int(14) NOT NULL,
-  `paid` tinyint(1) NOT NULL DEFAULT `0`,
+  `paid` tinyint(1) NOT NULL DEFAULT 0,
   `paid_date` datetime NOT NULL,
   `pay_amt` int(10) NOT NULL,
   PRIMARY KEY (`paymentid`)
