@@ -26,11 +26,8 @@ class Home extends MY_Controller {
 	public function add_friends(){
 		$allfriends = $this->input->post('allfriends');
 		$temp_friends = explode(",", $allfriends);
-		foreach($temp_friends as $friend) {
-			if($friend != "") {
- 				$pieces = explode("|", $friend);
-				$friends[$pieces[0]] = $pieces[1];
-			}
+		for ($i=0; $i < count($temp_friends); $i=$i+2) { 
+			$friends[$temp_friends[$i]] = $temp_friends[($i+1)];
 		}
 
 		$this->data['friends'] = $friends;
