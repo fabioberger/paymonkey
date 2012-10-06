@@ -20,7 +20,7 @@
 <label class="control-label" for="dp1">Payment Due Date</label>
 <div class="controls">
 <div class="input-append date" id="dp1" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-<input class="span2" size="16" type="text" value="12-02-2012" readonly="">
+<input id="duedate" class="span2" size="16" type="text" value="12-02-2012" readonly="">
 <span class="add-on"><i class="icon-calendar"></i></span>
 </div>
 </div>
