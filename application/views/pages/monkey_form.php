@@ -29,7 +29,6 @@
 <span class="add-on"><i class="icon-calendar"></i></span>
 </div>
 <input type="hidden" name="group_id" value="<?=$group_id; ?>"/>
-<input type="hidden" name="friends" value="<?=json_encode($friends); ?>"/>
 </div>
 </div>
 <div class="control-group">
