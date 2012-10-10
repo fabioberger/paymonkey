@@ -5,7 +5,11 @@
 </div>
 <div class="row">
 	<div class="span12">
-		<?php print_r($locations); ?>
+		<?php 
+		foreach($friend_infos as $friend) {
+			echo $friend['name'].": ".$friend['location']['name']."<br />";
+		}
+		?>
 	</div>
 </div>
 </section>

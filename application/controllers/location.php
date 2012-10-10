@@ -20,13 +20,13 @@ class Location extends MY_Controller {
 
 		$this->load->library('facebook');
 		$facebook = New Facebook();
-		$friend_locations = array();
+		$friend_infos = array();
 		foreach($friends as $friend_id => $name) {
-			$location = $facebook->getFriendLocation($friend_id);
-			$friend_locations[$friend_id] = $location;
+			$friend_info = $facebook->getFriendInfo($friend_id);
+			$friend_infos[$friend_id] = $friend_info;
 		}
 		
-		$this->data['locations'] = $friend_locations;
+		$this->data['friend_infos'] = $friend_infos;
 		$this->_render('pages/locations');
 	}
 
