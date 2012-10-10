@@ -23,7 +23,7 @@ class Location extends MY_Controller {
 		$this->gmap->GoogleMapAPI();
 
 		// valid types are hybrid, satellite, terrain, map
-		$this->gmap->setMapType('hybrid');
+		$this->gmap->setMapType('terrain');
 
 		$this->load->library('facebook');
 		$facebook = New Facebook();
