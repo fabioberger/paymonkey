@@ -18,6 +18,7 @@ class Location extends MY_Controller {
 			}
 		}
 		
+		$this->data['friends'] = $friends;
 		$this->_render('pages/locations');
 	}
 
