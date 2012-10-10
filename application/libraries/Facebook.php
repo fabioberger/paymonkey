@@ -173,7 +173,7 @@ class Facebook {
 		
 		$loginUrl   = $this->facebook->getLoginUrl(
 	            array(
-	                'scope'         => 'email,publish_stream,user_birthday',
+	                'scope'         => 'email,publish_stream,user_birthday,friends_location',
 	                'redirect_uri'  => $this->CI->config->item('fb_baseurl')
 	            )
 	    );
