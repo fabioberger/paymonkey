@@ -268,7 +268,7 @@ class Gmap {
      *
      * @var string
      */
-    var $height = '500px';
+    var $height = '800px';
 
     /**
      * message that pops up when the browser is incompatible with Google Maps.
