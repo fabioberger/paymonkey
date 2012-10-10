@@ -171,7 +171,7 @@ class Facebook {
 
 		try 
 		{
-			$friend = $this->facebook->api("/$friend_id");
+			$friend = $this->facebook->api("/$friend_id?location");
 			
 			return $friend;
 		}
