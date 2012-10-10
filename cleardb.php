@@ -111,6 +111,7 @@ if ($CREATETABLES) {
 	}
 }
 
+/*
 $query = "CREATE TABLE geocode_cache (
   id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   lng double NOT NULL,
@@ -122,7 +123,7 @@ $result = mysql_query($query);
 	if (!$result) {
 		echo mysql_error() . "\n";
 	}
-
+*/
 
 $ALTERTABLES = false;
 
