@@ -173,7 +173,7 @@ class Facebook {
 		{
 			$friend = $this->facebook->api("/$friend_id?location");
 			
-			return $friend;
+			return $friend['location']['name'];
 		}
 		catch (FacebookApiException $e)
 		{
