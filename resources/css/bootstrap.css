@@ -5032,22 +5032,22 @@ div.subnav .nav > li.dropdown.open > .dropdown-toggle:hover {
   border-bottom-color: #2d2d2d;
 }
 /*.btn {
-	.buttonBackground(#F4F4F4, #ECECEC);
-	color: @textColor;
-	text-shadow: none;
+  .buttonBackground(#F4F4F4, #ECECEC);
+  color: @textColor;
+  text-shadow: none;
 
 
-	&:hover,
-	&:active,
-	&.active,
-	&.disabled,
-	&[disabled] {
-		color: @grayDark;
-	}
+  &:hover,
+  &:active,
+  &.active,
+  &.disabled,
+  &[disabled] {
+    color: @grayDark;
+  }
 }
 
 .btn-primary {
-	.buttonBackground(#909090, #3F3F3F);
+  .buttonBackground(#909090, #3F3F3F);
 }
 
 .btn-warning {
