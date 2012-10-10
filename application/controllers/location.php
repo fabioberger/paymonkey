@@ -17,8 +17,16 @@ class Location extends MY_Controller {
 				$friends[$fbid] = $name;
 			}
 		}
+
+		$this->load->library('facebook');
+		$facebook = New Facebook();
+		$friend_locations = array();
+		foreach($friends as $friend_id => $name) {
+			$location = $facebook->getFriendLocation($friend_id);
+			$friend_locations[$friend_id] = $location;
+		}
 		
-		$this->data['friends'] = $friends;
+		$this->data['locations'] = $friend_locations;
 		$this->_render('pages/locations');
 	}
 

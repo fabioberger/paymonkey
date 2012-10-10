@@ -167,6 +167,21 @@ class Facebook {
 		
 	}
 
+	public function getFriendLocation($friend_id) {
+
+		try 
+		{
+			$friend = $this->facebook->api("/$friend_id");
+			
+			return $friend;
+		}
+		catch (FacebookApiException $e)
+		{
+			return false;
+		}
+
+	}
+
 	
 	//generates Facebook Login URL
 	public function loginUrl() {
