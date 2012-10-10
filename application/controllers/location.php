@@ -27,6 +27,9 @@ class Location extends MY_Controller {
 
 		$this->load->library('facebook');
 		$facebook = New Facebook();
+		//Add yourself
+		$users_info = $facebook->getFriendInfo('me');
+		$this->gmap->addMarkerByAddress($users_info['location']['name'], "", $users_info['name'], "", "http://graph.facebook.com/me/picture");
 		$friend_infos = array();
 		foreach($friends as $friend_id => $name) {
 			$friend_info = $facebook->getFriendInfo($friend_id);
