@@ -32,7 +32,7 @@ class Location extends MY_Controller {
 			$friend_info = $facebook->getFriendInfo($friend_id);
 			$friend_infos[$friend_id] = $friend_info;
 			if(array_key_exists('location', $friend_info)) {
-			$this->gmap->addMarkerByAddress($friend_info['location']['name'], "", $friend_info['name']);
+			$this->gmap->addMarkerByAddress($friend_info['location']['name'], "", $friend_info['name'], "", "http://graph.facebook.com/$friend_id/picture");
 			}
 		}
 
