@@ -7,7 +7,9 @@
 	<div class="span12">
 		<?php 
 		foreach($friend_infos as $friend) {
+			if(array_key_exists('location', $friend)) {
 			echo $friend['name'].": ".$friend['location']['name']."<br />";
+			}
 		}
 		?>
 	</div>
