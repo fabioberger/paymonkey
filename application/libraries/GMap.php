@@ -261,7 +261,7 @@ class Gmap {
      *
      * @var string
      */
-    var $width = '1000px';
+    var $width = '1300px';
     
     /**
      * determines the map height
