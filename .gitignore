@@ -2,3 +2,7 @@
 .buidpath
 .project
 .DS_Store
+application/config/database.php
+application/config/facebook.php
+application/config/config.php
+

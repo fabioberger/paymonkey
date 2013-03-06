@@ -1,7 +1,7 @@
 <div class="container">
 <section id="typography">
 <div class="page-header">
-<h1>Locations</h1>
+<h1>Visit your friends!</h1>
 </div>
 <div class="row">
 	<div class="span12">
